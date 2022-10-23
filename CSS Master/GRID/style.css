@@ -8,27 +8,24 @@ body {
     display: grid;
     gap: 5px;
     height: 50vh;
-    grid-template:
-        [header-start] "header header header header" 1fr[header-end]
-        [content-start] "content content content nav" 2fr [content-end]
-        [footer-start] "footer footer footer footer" 1fr [footer-end] / 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    place-items: stretch center;
+    /* align-items: stretch; */
+    /* justify-items: center; */
 }
 
 .header {
     background-color: #2ecc71;
-    grid-area: header;
 }
 .content {
     background-color: #3498db;
-    grid-area: content;
 }
 .nav {
     background-color: #8e44ad;
-    grid-area: nav;
 }
 .footer {
     background-color: #f39c12;
-    grid-area: footer;
 }
 
 /* 
@@ -81,5 +78,18 @@ fr은 전역으로 결정되는 것이 아닌 grid container에서 결정된다(
 
 -------------------------------------------------------------------------------
 
+justify-items: defalut=stretch (gird 부모(container)는 자식을 늘려서 부모를 채우게 함)
+속성: start, center, end
+
+align-items: default=stretch
+속성: start, center, end
+=> *둘 모두 grid container에서 적용
+
+만약 요소에 크기를 지정했다면 stretch 되지 않음.
++
+shortcut
+place-items: stretch center (vertical horizon)
+
+-------------------------------------------------------------------------------
 
 */
