@@ -6,30 +6,27 @@ body {
 
 .grid {
     display: grid;
-    grid-template-columns: auto 200px;
-    grid-template-rows: 100px repeat(2, 200px) 100px;
-    grid-template-areas:
-        "header header header header"
-        "content content content nav"
-        "content content content nav"
-        "footer footer footer footer";
+    gap: 10px;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(4, 100px);
 }
 
 .header {
     background-color: #2ecc71;
-    grid-area: header;
+    grid-column: span 4;
 }
 .content {
     background-color: #3498db;
-    grid-area: content;
+    grid-column: 1 / -2;
+    grid-row: span 2;
 }
 .nav {
     background-color: #8e44ad;
-    grid-area: nav;
+    grid-row: span 2;
 }
 .footer {
     background-color: #f39c12;
-    grid-area: footer;
+    grid-column: span 4;
 }
 
 /* 
@@ -40,6 +37,17 @@ grid-template-rows는 행의 개수와 행의 높이를 결정하는 property이
 column 사이에 공백을 주고 싶다면 column-gap,
 row 사이에 공백을 주고 싶다면 row-gap,
 column 사이와 row 사이에 동일한 공백을 주고 싶다면 gap을 사용하면 된다. 
+
+-------------------------------------------------------------------------------
+
+[grid-template-areas와 비슷한 기능을 하는 속성, 자식 grid에 명시한다.]
+1)grid-column-start
+2)grid-column-end
+3)grid-row-start
+4)grid-row-end
+해당 속성은 정수인 숫자가 들어가며, 1부터 column(row)의 최대갯수 + 1까지 사용 가능하다.
+범위를 초과하게 되면 css가 망가져서 생각한 대로 동작하지 않게 되니 꼭 명심하자.. 
+참고로 상대단위(%, auto)등은 안 먹히는 듯 하다.
 
 -------------------------------------------------------------------------------
 
