@@ -8,10 +8,8 @@ body {
     display: grid;
     color: white;
     gap: 5px;
-    grid-template-columns: repeat(4, 100px);
-    /* grid-auto-rows: 100px; */
+    grid-template-columns: repeat(10, minmax(100px, 1fr));
     grid-template-rows: repeat(4, 100px);
-    grid-auto-flow: column;
     grid-auto-columns: 100px;
 }
 
@@ -109,6 +107,11 @@ $ 20개 생성($는 20까지의 정수를 순차적으로)
 - 위 같은 상황이면 4줄까지는 계획, 그 이후는 해당 높이로 자동 설정된다.
 - Grid-auto-flow: column; -> 열 방향으로 추가 항목 형성
 - Grid-auto-flow: row; -> 기본값, 추가 데이터값이 행으로 생김
+
+-------------------------------------------------------------------------------
+
+[minmax]
+- Grid-template-columns: repeat(10, minmax(100px, 1fr)); //최대 1fr로 하되 최소 100px너비
 
 -------------------------------------------------------------------------------
 
