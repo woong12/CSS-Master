@@ -8,9 +8,8 @@ body {
     display: grid;
     color: white;
     gap: 5px;
-    grid-template-columns: repeat(10, minmax(100px, 1fr));
-    grid-template-rows: repeat(4, 100px);
-    grid-auto-columns: 100px;
+    grid-auto-rows: 100px;
+    margin-bottom: 30px;
 }
 
 .item:nth-child(odd) {
@@ -19,6 +18,13 @@ body {
 
 .item:nth-child(even) {
     background-color: #3498db;
+}
+.grid:first-child {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+}
+
+.grid:nth-child(2) {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 }
 
 /* 
@@ -112,6 +118,15 @@ $ 20개 생성($는 20까지의 정수를 순차적으로)
 
 [minmax]
 - Grid-template-columns: repeat(10, minmax(100px, 1fr)); //최대 1fr로 하되 최소 100px너비
+
+-------------------------------------------------------------------------------
+
+[auto-fill, auto-fit]
+- Grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); 
+//창 너비가 늘어나면 빈 column들로 row를 채움
+
+- Grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); 
+// 창 너비가 늘어나면 element를 늘려서 row에 맞게 해줌
 
 -------------------------------------------------------------------------------
 
