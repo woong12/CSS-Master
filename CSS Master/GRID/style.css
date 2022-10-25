@@ -5,16 +5,16 @@ body {
 }
 
 .grid {
+    background: grey;
     display: grid;
+    color: white;
     gap: 5px;
-    height: 50vh;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    place-items: stretch center;
-    /* align-items: stretch; */
-    /* justify-items: center; */
+    height: 250vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(4, 100px);
+    align-content: flex-end;
 }
- 
+
 .header {
     background-color: #2ecc71;
 }
@@ -91,5 +91,17 @@ shortcut
 place-items: stretch center (vertical horizon)
 
 -------------------------------------------------------------------------------
+
+[place content]
+- Justify-content : start; (그리드가 놓이는 위치를 뜻하며 기본은 start)
+- Align-content는 수직적으로 그리드를 움직이는 것
+- Start, end, space-evenly, space-around, space-between 사용
+- 컨테이너의 height가 그리드를 담을 만큼 충분해야한다.(높이 지정)
+- Grid-template에서 높이를 fr로 설정하고 align-content를 stretch로 설정하면 쭉 늘어난다.
+- Place items와 마찬가지로 place-content를 통해 수직 수평으로 그리드 이동가능(첫번째가 수직, 두번째 옵션이 수평)
+- Place-items는 셀안에서 항목이 이동하는 것이며, place-content는 그리드가 이동하는 것이다.
+
+-------------------------------------------------------------------------------
+
 
 */
