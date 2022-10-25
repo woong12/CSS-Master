@@ -5,27 +5,22 @@ body {
 }
 
 .grid {
-    background: grey;
     display: grid;
     color: white;
     gap: 5px;
-    height: 250vh;
     grid-template-columns: repeat(4, 100px);
+    /* grid-auto-rows: 100px; */
     grid-template-rows: repeat(4, 100px);
-    align-content: flex-end;
+    grid-auto-flow: column;
+    grid-auto-columns: 100px;
 }
 
-.header {
+.item:nth-child(odd) {
     background-color: #2ecc71;
 }
-.content {
+
+.item:nth-child(even) {
     background-color: #3498db;
-}
-.nav {
-    background-color: #8e44ad;
-}
-.footer {
-    background-color: #f39c12;
 }
 
 /* 
@@ -100,6 +95,20 @@ place-items: stretch center (vertical horizon)
 - Grid-template에서 높이를 fr로 설정하고 align-content를 stretch로 설정하면 쭉 늘어난다.
 - Place items와 마찬가지로 place-content를 통해 수직 수평으로 그리드 이동가능(첫번째가 수직, 두번째 옵션이 수평)
 - Place-items는 셀안에서 항목이 이동하는 것이며, place-content는 그리드가 이동하는 것이다.
+
+-------------------------------------------------------------------------------
+
+// VScode에서 항목 여러 개 생성하기 :
+.item*20>{$}
+$ 20개 생성($는 20까지의 정수를 순차적으로)
+[auto columns and rows]
+- 세팅해둔 그리드행보다 더 많은 데이터를 불러올 경우가 있다. (재사용성이 떨어짐)
+- 자동으로 할당하도록 설정한다면 그리드의 재사용성을 높일 수 있다.
+- Grid-template-rows: repeat(4, 100px);
+- Grid-auto-rows: 100px;
+- 위 같은 상황이면 4줄까지는 계획, 그 이후는 해당 높이로 자동 설정된다.
+- Grid-auto-flow: column; -> 열 방향으로 추가 항목 형성
+- Grid-auto-flow: row; -> 기본값, 추가 데이터값이 행으로 생김
 
 -------------------------------------------------------------------------------
 
