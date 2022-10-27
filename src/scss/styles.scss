@@ -1,21 +1,6 @@
 @import "_variables";
+@import "_mixins";
 
-h2 {
-    color: $bg;
-}
-
-.box {
-    &:hover {
-        background-color: green;
-    }
-    margin-top: 20px;
-    h2 {
-        color: blue;
-        &:hover {
-            color: red;
-        }
-    }
-    button {
-        color: red;
-    }
+a {
+    @include Tiitle();
 }
