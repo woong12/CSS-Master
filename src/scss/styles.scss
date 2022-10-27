@@ -1,22 +1,33 @@
 @import "_variables";
+@import "_mixins";
 
-.box h2 {
-    color: blue;
-}
-
-.box {
-    margin-top: 20px;
-    &:hover {
-        background-color: green;
+a {
+    margin-bottom: 20px;
+    &:nth-child(odd) {
+        @include link("odd");
     }
 
-    h2 {
-        color: blue;
-        &:hover {
-            color: red;
-        }
-    }
-    button {
-        color: red;
+    &:nth-child(even) {
+        @include link("even");
     }
 }
+// .box h2 {
+//     color: blue;
+// }
+
+// .box {
+//     margin-top: 20px;
+//     &:hover {
+//         background-color: green;
+//     }
+
+//     h2 {
+//         color: blue;
+//         &:hover {
+//             color: red;
+//         }
+//     }
+//     button {
+//         color: red;
+//     }
+// }
