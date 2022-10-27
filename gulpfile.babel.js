@@ -8,31 +8,31 @@ import autoprefixer from "gulp-autoprefixer";
 const sass = gulpSass(sass2);
 
 const routes = {
-  css: {
-    watch: "src/scss/*",
-    src: "src/scss/styles.scss",
-    dest: "dest/css",
-  },
+    css: {
+        watch: "src/scss/*",
+        src: "src/scss/styles.scss",
+        dest: "dist/css",
+    },
 };
 
 const styles = () =>
-  gulp
-    .src(routes.css.src)
-    .pipe(sass().on("error", sass.logError))
-    .pipe(
-      autoprefixer({
-        flexbox: true,
-        grid: "autoplace",
-      })
-    )
-    .pipe(minify())
-    .pipe(gulp.dest(routes.css.dest));
+    gulp
+        .src(routes.css.src)
+        .pipe(sass().on("error", sass.logError))
+        .pipe(
+            autoprefixer({
+                flexbox: true,
+                grid: "autoplace",
+            })
+        )
+        .pipe(minify())
+        .pipe(gulp.dest(routes.css.dest));
 
 const watch = () => {
-  gulp.watch(routes.css.watch, styles);
+    gulp.watch(routes.css.watch, styles);
 };
 
-const clean = async () => await deleteSync(["dest/"]);
+const clean = async () => await deleteSync(["dist/"]);
 
 const prepare = gulp.series([clean]);
 
