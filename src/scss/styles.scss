@@ -1,5 +1,22 @@
 @import "_variables";
 
-body {
-    background: black;
+.box h2 {
+    color: blue;
+}
+
+.box {
+    margin-top: 20px;
+    &:hover {
+        background-color: green;
+    }
+
+    h2 {
+        color: blue;
+        &:hover {
+            color: red;
+        }
+    }
+    button {
+        color: red;
+    }
 }
