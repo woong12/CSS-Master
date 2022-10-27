@@ -1,6 +1,5 @@
 @import "_variables";
-@import "_mixins";
 
-a {
-    @include Tiitle();
+body {
+    background: black;
 }
