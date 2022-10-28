@@ -1,14 +1,14 @@
-@import "_mixins rsp";
+// @import "_mixins rsp";
 
-h1 {
-    color: red;
-    @include responsive("iphone") {
-        color: yellow;
-    }
-    @include responsive("iphone-l") {
-        font-size: 60px;
-    }
-    @include responsive("tablet") {
-        color: green;
-    }
-}
+// h1 {
+//     color: red;
+//     @include responsive("iphone") {
+//         color: yellow;
+//     }
+//     @include responsive("iphone-l") {
+//         font-size: 60px;
+//     }
+//     @include responsive("tablet") {
+//         color: green;
+//     }
+// }

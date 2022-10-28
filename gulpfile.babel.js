@@ -9,9 +9,10 @@ const sass = gulpSass(sass2);
 
 const routes = {
     css: {
-        watch: "src/scss/*",
-        src: "src/scss/styles.scss",
+        watch: "src/BestHorrorScenes/*",
+        src: "src/BestHorrorScenes/styles.scss",
         dest: "dist/css",
+        //폴더이름으로 바꾸기
     },
 };
 
