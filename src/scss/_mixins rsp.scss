@@ -12,7 +12,7 @@ $maxTablet: 1120px;
         @media screen and (min-width: $minTablet) and (max-width: $maxTablet) {
             @content;
         }
-    } @else if $devide == "iphone-" {
+    } @else if $device == "iphone-l" {
         @media screen and (min-width: $minIphone) and (max-width: $maxIphone) and (orentation: landscape) {
             @content;
         }
