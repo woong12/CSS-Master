@@ -1,1 +1,1 @@
-https://besthorrorscenes.netlify.app/
+besthorrorscenes.netlify.app
