@@ -1,0 +1,277 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,500&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Caladea:400&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap);
+.blog .blog__post a,
+.hero a,
+.under-hero .under-hero__content .wrapper h4,
+header,
+header nav ul:first-child li {
+    font-family: "Montserrat";
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+* {
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+body {
+    font-family: "Caladea";
+    padding-top: 70px;
+}
+body > :not(.footer) {
+    padding: 0 140px;
+}
+header,
+header nav,
+header nav .logo img {
+    display: flex;
+    align-items: center;
+}
+header {
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 0 140px;
+    background-color: #fff;
+    height: 135px;
+}
+header nav {
+    width: 100%;
+    justify-content: space-between;
+}
+header nav .logo {
+    margin-left: -235px;
+}
+header nav .logo img {
+    justify-content: center;
+}
+header nav ul {
+    display: flex;
+    text-transform: uppercase;
+    font-size: 10px;
+}
+header nav ul:first-child li {
+    margin-right: 60px;
+}
+header nav ul .nail,
+header nav ul .shop {
+    padding: 30px 0;
+}
+header nav ul .nail:hover,
+header nav ul .shop:hover {
+    cursor: pointer;
+    color: silver;
+}
+.hero {
+    height: 108vh;
+    background-image: url(https://cdn.shopify.com/s/files/1/0086/4865/4895/files/Untitled-1_c7130e00-ea87-40e1-a45d-39231d736703_1920x1115_crop_center.jpg?v=1666814954);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 80px;
+    color: #fff;
+}
+.hero h4 {
+    font-family: sans-serif;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+.hero em,
+.under-hero .under-hero__content .wrapper h3 em {
+    font-style: oblique;
+    font-family: "Nanum Myeongjo", serif;
+}
+.hero h3 {
+    font-size: 44px;
+    font-family: "Nanum Myeongjo", serif;
+    text-align: center;
+    letter-spacing: -1px;
+    line-height: 50px;
+    margin-bottom: 50px;
+}
+.hero a,
+.under-hero .under-hero__content .wrapper a {
+    width: 15%;
+    font-size: 9px;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: 1.5px solid;
+    border-color: #fff;
+    padding: 22px 0;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.3s linear, background 0.3s linear;
+}
+.hero a:hover {
+    background-color: #fff;
+    color: #000;
+}
+.blog,
+.under-hero {
+    width: 100%;
+    margin-bottom: 80px;
+}
+.under-hero {
+    height: 85vh;
+    display: flex;
+}
+.under-hero .under-hero__content {
+    height: 100%;
+    width: 100%;
+    background-color: #f3ede8;
+}
+.under-hero .under-hero__content,
+.under-hero .under-hero__content .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.under-hero .under-hero__content .wrapper h4 {
+    font-size: 10px;
+    margin-bottom: 35px;
+}
+.under-hero .under-hero__content .wrapper h3 {
+    font-size: 30px;
+    width: 120%;
+    font-family: "Nanum Myeongjo";
+    text-align: center;
+    color: #2f4f4f;
+    margin-bottom: 75px;
+}
+.under-hero .under-hero__content .wrapper a {
+    width: 60%;
+    font-size: 8px;
+    font-weight: 700;
+    font-family: "Montserrat";
+    letter-spacing: 1.2px;
+    border-color: #000;
+    padding: 20px 0;
+    color: #000;
+    transition: all 0.3s linear;
+}
+.under-hero .under-hero__content .wrapper a:hover {
+    background-color: #000;
+    color: #fff;
+}
+.under-hero div,
+.under-hero img {
+    width: 50%;
+}
+.blog {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 60vh);
+}
+.blog .blog__post {
+    display: grid;
+    background-color: #f3ede8;
+    grid-template-columns: repeat(2, 1fr);
+}
+.blog .blog__post:nth-child(even) img {
+    order: 1;
+}
+.blog .blog__post img {
+    width: 100%;
+    height: 100%;
+}
+.blog .blog__post .post__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.blog .blog__post .post__date {
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-family: "Nanum Myeongjo";
+    margin-bottom: 45px;
+}
+.blog .blog__post h4 {
+    font-size: 30px;
+    font-family: "Nanum Myeongjo";
+    color: #696969;
+    margin-bottom: 65px;
+}
+.blog .blog__post a {
+    font-size: 10px;
+}
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 410px);
+}
+.gallery .gallery__poster {
+    cursor: pointer;
+    height: 100%;
+}
+.gallery .gallery__poster img {
+    max-width: 100%;
+    height: 100%;
+    transition: opacity 0.3s linear;
+}
+.gallery .gallery__poster img:hover {
+    opacity: 0.5;
+}
+.com,
+.footer {
+    margin-top: 110px;
+}
+.com {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.com .follow {
+    font-family: "Nanum Myeongjo", serif;
+    font-size: 40px;
+}
+.com .follow em {
+    opacity: 0.3;
+}
+.footer {
+    background-color: #f3ede8;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 60px 0;
+}
+.footer .footer__column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Montserrat";
+}
+.footer .footer__column .column__title {
+    text-transform: uppercase;
+    font-size: 9px;
+    font-weight: 700;
+    margin-bottom: 50px;
+    letter-spacing: 1.5px;
+    opacity: 0.4;
+}
+.footer .footer__column ul {
+    text-align: center;
+}
+.footer .footer__column ul li {
+    text-transform: uppercase;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+.footer .footer__column:nth-child(2) {
+    border-right: 1px solid #000;
+    border-left: 1px solid #000;
+}
