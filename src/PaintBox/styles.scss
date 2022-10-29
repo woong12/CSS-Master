@@ -1,6 +1,183 @@
-@import "_variables";
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Caladea:400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap");
 
-h2 {
-    color: $red;
-    font-size: 40px;
+@import "_variables";
+@import "_titles";
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    font-family: "Caladea";
+    padding-top: 70px;
+}
+
+body > *:not(.footer) {
+    padding: 0px 140px;
+}
+
+header {
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 0px 140px;
+    background-color: white;
+    height: 155px;
+    display: flex;
+    align-items: center;
+    @extend %miniTitle;
+    nav {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        ul {
+            display: flex;
+            text-transform: uppercase;
+            font-size: 10px;
+            &:first-child {
+                li {
+                    margin-right: 60px;
+                    @extend %miniTitle;
+                }
+            }
+            .nail {
+                padding: 30px 0px;
+                &:hover {
+                    cursor: pointer;
+                    color: silver;
+                }
+            }
+            .shop {
+                padding: 30px 0px;
+                &:hover {
+                    cursor: pointer;
+                    color: silver;
+                }
+            }
+        }
+    }
+}
+
+.hero {
+    height: 108vh;
+    background-image: url(https://cdn.shopify.com/s/files/1/0086/4865/4895/files/Untitled-1_c7130e00-ea87-40e1-a45d-39231d736703_1920x1115_crop_center.jpg?v=1666814954);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 80px;
+
+    color: white;
+    h4 {
+        font-family: sans-serif;
+        font-size: 10px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: 30px;
+    }
+    em {
+        font-style: oblique;
+        font-family: "Nanum Myeongjo", serif;
+    }
+    h3 {
+        font-size: 44px;
+        font-family: "Nanum Myeongjo", serif;
+        text-align: center;
+        letter-spacing: -1px;
+        line-height: 50px;
+        margin-bottom: 50px;
+    }
+    a {
+        width: 15%;
+        @extend %miniTitle;
+        font-size: 9px;
+        text-transform: uppercase;
+        background-color: transparent;
+        border: 1.5px solid;
+        border-color: white;
+        padding: 22px 0px;
+        text-align: center;
+        text-decoration: none;
+        color: white;
+        transition: all 0.3s linear, background 0.3s linear;
+        &:hover {
+            background-color: white;
+            color: black;
+        }
+    }
+}
+
+.under-hero {
+    height: 85vh;
+    display: flex;
+    width: 100%;
+    margin-bottom: 80px;
+    .under-hero__content {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: $bg;
+        .wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            h4 {
+                font-size: 10px;
+                @extend %miniTitle;
+                margin-bottom: 35px;
+            }
+            h3 {
+                font-size: 30px;
+                width: 120%;
+                font-family: "Nanum Myeongjo";
+                text-align: center;
+                color: darkslategray;
+                margin-bottom: 75px;
+                em {
+                    font-style: oblique;
+                    font-family: "Nanum Myeongjo", serif;
+                }
+            }
+            a {
+                width: 59%;
+                font-size: 8px;
+                font-weight: 700;
+                font-family: "Montserrat";
+                letter-spacing: 1.2px;
+                text-transform: uppercase;
+                background-color: transparent;
+                border: 1.5px solid;
+                border-color: black;
+                padding: 22px 0px;
+                text-align: center;
+                text-decoration: none;
+                color: black;
+                transition: all 0.3s linear;
+                &:hover {
+                    background-color: black;
+                    color: white;
+                }
+            }
+        }
+    }
+    img,
+    div {
+        width: 50%;
+    }
 }
