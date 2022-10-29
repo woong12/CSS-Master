@@ -31,7 +31,7 @@ header {
     left: 0;
     padding: 0px 140px;
     background-color: white;
-    height: 155px;
+    height: 135px;
     display: flex;
     align-items: center;
     @extend %miniTitle;
@@ -40,6 +40,14 @@ header {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        .logo {
+            margin-left: -235px;
+            img {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
         ul {
             display: flex;
             text-transform: uppercase;
@@ -155,7 +163,7 @@ header {
                 }
             }
             a {
-                width: 59%;
+                width: 60%;
                 font-size: 8px;
                 font-weight: 700;
                 font-family: "Montserrat";
@@ -164,7 +172,7 @@ header {
                 background-color: transparent;
                 border: 1.5px solid;
                 border-color: black;
-                padding: 22px 0px;
+                padding: 20px 0px;
                 text-align: center;
                 text-decoration: none;
                 color: black;
@@ -179,5 +187,117 @@ header {
     img,
     div {
         width: 50%;
+    }
+}
+
+.blog {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 60vh);
+    margin-bottom: 80px;
+    .blog__post {
+        display: grid;
+        background-color: $bg;
+        grid-template-columns: repeat(2, 1fr);
+        &:nth-child(even) {
+            img {
+                order: 1;
+            }
+        }
+        img {
+            width: 100%;
+            height: 100%;
+        }
+        .post__content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .post__date {
+            font-size: 12px;
+            letter-spacing: 1px;
+            font-family: "Nanum Myeongjo";
+            margin-bottom: 45px;
+        }
+        h4 {
+            font-size: 30px;
+            font-family: "Nanum Myeongjo";
+            color: dimgray;
+            margin-bottom: 65px;
+        }
+        a {
+            @extend %miniTitle;
+            font-size: 10px;
+        }
+    }
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 410px);
+    .gallery__poster {
+        cursor: pointer;
+        height: 100%;
+        img {
+            max-width: 100%;
+            height: 100%;
+            transition: opacity 0.3s linear;
+            &:hover {
+                opacity: 0.5;
+            }
+        }
+    }
+}
+
+.com {
+    margin-top: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .follow {
+        font-family: "Nanum Myeongjo", serif;
+        font-size: 40px;
+        em {
+            opacity: 0.3;
+        }
+    }
+}
+
+.footer {
+    margin-top: 110px;
+    background-color: $bg;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 60px 0px;
+    .footer__column {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: "Montserrat";
+        .column__title {
+            text-transform: uppercase;
+            font-size: 9px;
+            font-weight: 700;
+            margin-bottom: 50px;
+            letter-spacing: 1.5px;
+            opacity: 0.4;
+        }
+        ul {
+            text-align: center;
+            li {
+                text-transform: uppercase;
+                font-size: 9px;
+                font-weight: 500;
+                letter-spacing: 2px;
+                margin-bottom: 15px;
+            }
+        }
+        &:nth-child(2) {
+            border-right: 1px solid black;
+            border-left: 1px solid black;
+        }
     }
 }
