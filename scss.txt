@@ -1,0 +1,13 @@
+HTML에 SCSS 적용하는법
+
+1. 'index.html' 파일 생성
+
+2. 'css' 폴더 만들고 'style.css' 와 'style.scss' 파일 생성
+
+3. link 태그로 'style.css' 링크하기
+
+4. 터미널에 " npx sass --watch css/style.scss css/style.css " 입력
+
+5. 'style.scss' 파일에 코드 작성
+
+6. 저장하면 'style.css'에 코드가 작성됨
