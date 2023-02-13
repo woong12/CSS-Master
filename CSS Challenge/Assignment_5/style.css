@@ -1,0 +1,132 @@
+* {
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.page {
+  height: 500px;
+  width: 740px;
+  background-color: rgba(0, 0, 0, 0.05);
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.6), -20px -20px 50px ivory;
+  display: grid;
+  grid-template-columns: repeat(4, 185px);
+}
+
+.box1 {
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+}
+
+.box1_1 {
+  background-color: black;
+}
+
+.box1-list {
+  color: white;
+  list-style: none;
+  text-transform: uppercase;
+  padding-left: 5px;
+  font-size: 24px;
+  letter-spacing: 1px;
+  line-height: 22px;
+  margin-top: 5px;
+}
+
+.date {
+  margin-left: 9px;
+  font-style: inherit;
+}
+
+.box1_2 {
+  background-color: red;
+}
+
+.box2-list {
+  color: black;
+  list-style: none;
+  text-transform: uppercase;
+  padding-left: 8px;
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: 1px;
+  line-height: 23px;
+  margin-top: 8px;
+}
+
+.box2 {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.box2_1 {
+  background-color: mediumslateblue;
+}
+
+.box2_2 {
+  background-color: white;
+}
+
+.box2_3 {
+  background-color: gold;
+  display: flex;
+}
+
+.tickets {
+  text-transform: uppercase;
+  margin-top: 8px;
+  font-size: 20px;
+  padding-left: 8px;
+  font-weight: 500;
+}
+
+.box3 {
+  background-color: white;
+  text-transform: uppercase;
+}
+
+.speakers {
+  font-size: 10px;
+  font-weight: 500;
+  padding-left: 10px;
+}
+
+.purple {
+  background-color: mediumslateblue;
+  padding: 1px;
+  margin-left: -1px;
+}
+
+.box3-list {
+  padding-left: 10px;
+  list-style: none;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+}
+
+.box4 {
+  background-color: white;
+  text-transform: uppercase;
+}
+
+.artists {
+  font-size: 10px;
+  font-weight: 500;
+  padding-left: 10px;
+}
+
+.box4-list {
+  padding-left: 10px;
+  line-height: 17px;
+  list-style: none;
+  font-size: 14px;
+  font-weight: 500;
+}
