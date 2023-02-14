@@ -17,8 +17,26 @@ body {
   background-color: rgba(0, 0, 0, 0.05);
   box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.6), -20px -20px 50px ivory;
   display: grid;
-  grid-template-rows: 1fr 18fr 1fr;
+  grid-template-rows: 1fr 20fr 1fr;
   border: 8px solid rgb(227, 227, 71);
+  position: relative;
+}
+
+.talk {
+  display: flex;
+  justify-content: center;
+  font-size: 17px;
+  align-items: center;
+  color: white;
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  border-radius: 3px;
+  background-color: coral;
+  bottom: 0;
+  margin: 18px;
+  z-index: 1;
+  right: 0;
 }
 
 .main {
@@ -29,10 +47,15 @@ body {
 .top_bar {
   border: 3px solid coral;
   display: flex;
-  font-weight: 500;
+  font-weight: 700;
+  font-size: 14px;
   align-items: center;
   font-style: italic;
   color: coral;
+}
+
+.top_bar em {
+  margin-left: 40px;
 }
 
 .left_bar {
@@ -44,9 +67,41 @@ body {
 
 .left_bar-1 {
   background-color: coral;
+  color: white;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-style: italic;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  letter-spacing: -1px;
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+}
+
+.left_bar-1 i {
+  font-size: 5px;
+  margin: 10px 0px 10px 0px;
 }
 
 .left_bar-2 {
+  transform: rotate(180deg);
+  writing-mode: vertical-lr;
+  color: coral;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-style: italic;
+  font-size: 13px;
+  font-weight: 800;
+  text-orientation: sideways-right;
+}
+
+.left_bar-2 i {
+  margin-top: 10px;
+  transform: rotate(180deg);
+  font-size: 18px;
 }
 
 .left_bar-3 {
@@ -64,14 +119,44 @@ body {
   grid-template-rows: 1fr 1fr;
   border-right: 3px solid coral;
   border-left: 3px solid coral;
-  background-color: forestgreen;
+  background-color: seagreen;
 }
 
 .right_bar-1 {
+  color: white;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-style: italic;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+}
+
+.right_bar-1 i {
+  margin: 35px 0px 35px 0px;
+  font-size: 10px;
 }
 
 .right_bar-2 {
   border-top: 3px solid coral;
+  color: white;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-style: italic;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+}
+
+.right_bar-2 i {
+  font-size: 5px;
+  margin: 25px 0px 25px 0px;
 }
 
 .photo {
@@ -104,10 +189,27 @@ body {
 
 img {
   width: 100%;
-  height: 571px;
+  height: 576px;
   object-fit: cover;
 }
 
 .under_bar {
   border: 3px solid coral;
+  display: flex;
+  font-weight: 700;
+  align-items: center;
+  font-style: italic;
+  font-size: 14px;
+  color: coral;
+}
+
+.under_bar em {
+  margin-right: 40px;
+}
+
+.label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 23px;
 }
